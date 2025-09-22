@@ -2,24 +2,6 @@
 
 このリポジトリは、ncnnを題材としたLinux+C++向けチュートリアル資料と付録をまとめています。各章は個別のMarkdownファイルになっており、環境構築から高度なトピックまで体系的に学べる構成です。
 
-## 目次
-- [概要](#概要)
-- [ファイル一覧](#ファイル一覧)
-  - [CLAUDE.md](CLAUDE.md)
-  - [ncnn_tutorial_toc.md](ncnn_tutorial_toc.md)
-  - [chapter01.md](chapter01.md)
-  - [chapter02.md](chapter02.md)
-  - [chapter03.md](chapter03.md)
-  - [chapter04.md](chapter04.md)
-  - [chapter05.md](chapter05.md)
-  - [chapter06.md](chapter06.md)
-  - [chapter07.md](chapter07.md)
-  - [chapter08.md](chapter08.md)
-  - [chapter09.md](chapter09.md)
-  - [chapter10.md](chapter10.md)
-  - [chapter11.md](chapter11.md)
-  - [chapter12.md](chapter12.md)
-  - [appendix.md](appendix.md)
 
 ## 概要
 ncnnはTencentが開発したモバイル向け高性能ニューラルネットワーク推論ライブラリです。本教材では基礎概念、モデル変換、C++ APIの使い方から実践的アプリケーション、最適化、トラブルシューティングまでを順に解説します。最後に参考資料とAPI付録を収録しています。
