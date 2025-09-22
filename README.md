@@ -1,37 +1,42 @@
-# ncnn Tutorial
+# ncnn チュートリアル資料
 
-このリポジトリは、軽量ディープラーニング推論エンジン **ncnn** をエッジ・モバイル環境で活用するための解説資料をまとめています。第1章から第10章まで順を追って読み進めれば、環境構築からモデル変換、最適化、カスタマイズ、トラブルシューティングまでを体系的に把握できます。
-本稿はcodexで生成しました。
-
-## 想定読者
-- 端末内推論を前提としたAIアプリケーション開発者
-- ncnnを用いたモデルデプロイを検討しているMLOps/インフラ担当者
-- モバイル・エッジ向けの最適化手法を学びたいエンジニア
+このリポジトリは、ncnnを題材としたLinux+C++向けチュートリアル資料と付録をまとめています。各章は個別のMarkdownファイルになっており、環境構築から高度なトピックまで体系的に学べる構成です。
 
 ## 目次
-- `chapter01.md` 第1章 ncnnとは: プロジェクトの背景、設計思想、適用分野の俯瞰。
-- `chapter02.md` 第2章 環境構築とツールチェーン: 対応プラットフォーム別のセットアップとビルド手順。
-- `chapter03.md` 第3章 モデル変換の基礎: onnx2ncnnやncnnoptimizeを用いた変換パイプラインと検証方法。
-- `chapter04.md` 第4章 推論エンジンの仕組み: Net/Extractorの内部構造、メモリ管理、Vulkanバックエンドの流れ。
-- `chapter05.md` 第5章 APIを使った推論アプリ開発: C++/Androidでの推論コード例と前処理・後処理の実装ポイント。
-- `chapter06.md` 第6章 モバイル・エッジ端末への最適化: 省メモリ化やレイテンシ削減、デバイス別チューニング戦略。
-- `chapter07.md` 第7章 パフォーマンスチューニングとプロファイリング: CPU/GPUのプロファイル方法とボトルネック解析手法。
-- `chapter08.md` 第8章 カスタムレイヤー実装: Layer拡張の基本、Paramファイル連携、テストの進め方。
-- `chapter09.md` 第9章 実践プロジェクト事例: リアルタイム顔フィルタや産業用検査などのケーススタディ。
-- `chapter10.md` 第10章 トラブルシューティングとベストプラクティス: 典型的なエラー対策、運用時の品質保証と拡張指針。
+- [概要](#概要)
+- [ファイル一覧](#ファイル一覧)
+  - [CLAUDE.md](CLAUDE.md)
+  - [ncnn_tutorial_toc.md](ncnn_tutorial_toc.md)
+  - [chapter01.md](chapter01.md)
+  - [chapter02.md](chapter02.md)
+  - [chapter03.md](chapter03.md)
+  - [chapter04.md](chapter04.md)
+  - [chapter05.md](chapter05.md)
+  - [chapter06.md](chapter06.md)
+  - [chapter07.md](chapter07.md)
+  - [chapter08.md](chapter08.md)
+  - [chapter09.md](chapter09.md)
+  - [chapter10.md](chapter10.md)
+  - [chapter11.md](chapter11.md)
+  - [chapter12.md](chapter12.md)
+  - [appendix.md](appendix.md)
 
-## 使い方
-1. 興味のあるトピックに応じて各章のMarkdownファイルを参照してください。
-2. セットアップ作業は第2章、モデル変換は第3章、アプリ実装は第5章・第6章を中心に読み進めると効率的です。
-3. パフォーマンス改善や問題解析が必要になったら第7章・第10章を必要に応じて参照してください。
+## 概要
+ncnnはTencentが開発したモバイル向け高性能ニューラルネットワーク推論ライブラリです。本教材では基礎概念、モデル変換、C++ APIの使い方から実践的アプリケーション、最適化、トラブルシューティングまでを順に解説します。最後に参考資料とAPI付録を収録しています。
 
-## 貢献のお願い
-- 誤植や改善提案はIssueまたはPull Requestでお知らせください。
-- 実務で得た知見や追加事例の共有も歓迎します。該当章の方針に沿って追記してください。
-
-## 関連リンク
-- ncnn 公式リポジトリ: https://github.com/Tencent/ncnn
-- 公式ドキュメント: https://github.com/Tencent/ncnn/wiki
-
-## ライセンス
-本リポジトリ内ドキュメントのライセンスは未定義です。利用・再配布の前に管理者へ確認してください。
+## ファイル一覧
+- [CLAUDE.md](CLAUDE.md): Claude Code向けの作業ガイドライン。
+- [ncnn_tutorial_toc.md](ncnn_tutorial_toc.md): 全体の章構成をまとめた目次。
+- [chapter01.md](chapter01.md): ncnnの概要と歴史、開発背景の紹介。
+- [chapter02.md](chapter02.md): 推奨環境や依存パッケージなどのセットアップ手順。
+- [chapter03.md](chapter03.md): ncnnアーキテクチャと主要コンポーネントの基本概念。
+- [chapter04.md](chapter04.md): 各種フレームワークのモデルをncnn形式に変換する方法。
+- [chapter05.md](chapter05.md): C++ APIの基本的な使い方と主要ヘッダ・クラス。
+- [chapter06.md](chapter06.md): ncnnを用いた画像分類アプリケーションの実装手順。
+- [chapter07.md](chapter07.md): YOLOシリーズを中心にした物体検出の実装方法。
+- [chapter08.md](chapter08.md): マルチスレッドやGPU活用を含む性能最適化テクニック。
+- [chapter09.md](chapter09.md): 実践的なアプリケーション開発例と運用ポイント。
+- [chapter10.md](chapter10.md): カスタムレイヤーなど上級者向けトピックの詳細。
+- [chapter11.md](chapter11.md): 開発中に遭遇しやすい問題の診断と対処法。
+- [chapter12.md](chapter12.md): 公式ドキュメントや関連リソースを整理した参考資料集。
+- [appendix.md](appendix.md): APIリファレンスを中心とする付録情報。
